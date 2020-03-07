@@ -1,0 +1,14 @@
+<h2>{{listLabel}}</h2>
+<div *ngFor="let disc of discs; index as discId">
+  <h3>
+    <a [title]="'Detalhes de '+disc.name"
+      [routerLink]="['/discs', discId]">
+    {{disc.name}}
+    </a>
+  </h3>
+  <p *ngIf="disc.description">
+    <u> Descrição:</u> {{disc.description}}
+  </p>
+  
+  
+</div>
